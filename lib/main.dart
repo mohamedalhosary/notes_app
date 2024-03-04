@@ -12,8 +12,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+     home: NotesApp(),
     );
+  }
+}
+
+class NotesApp extends StatelessWidget {
+  const NotesApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container();
   }
 }
 
