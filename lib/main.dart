@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_app/views/notes_views.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,12 +8,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of your applicatio.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-     home: NotesApp(),
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Unbounded'
+      ),
+      home: const NotesView(),
+     
     );
   }
 }
@@ -22,7 +27,9 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container();
+    return Scaffold(
+
+    );
   }
 }
 
