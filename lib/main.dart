@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         fontFamily: 'Unbounded'
       ),
+      debugShowCheckedModeBanner: false,
       home: const NotesView(),
      
     );
