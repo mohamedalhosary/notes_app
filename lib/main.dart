@@ -4,11 +4,12 @@ import 'package:quran_app/views/notes_views.dart';
 void main() {
   runApp(const MyApp());
 }
+// this notes app by eng mohamed alhosary
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your applicatio.
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,17 +20,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const NotesView(),
      
-    );
-  }
-}
-
-class NotesApp extends StatelessWidget {
-  const NotesApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
     );
   }
 }
