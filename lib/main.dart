@@ -5,6 +5,7 @@ import 'package:quran_app/views/widgets/constants.dart';
 
 void main() async {
   await Hive.initFlutter();
+
   await Hive.openBox(kNotesBox);
   runApp(const MyApp());
 }
