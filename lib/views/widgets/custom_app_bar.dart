@@ -3,17 +3,23 @@ import 'package:quran_app/views/widgets/custom_note_item.dart';
 import 'package:quran_app/views/widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.title, required this.icon});
 
+  final String title;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        Text('Notes' ,style: TextStyle(fontSize: 28,),),
+    return  Row(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 28,
+          ),
+        ),
         Spacer(),
-        CustomSearchIcon()
+        CustomIcon(icon: icon,)
       ],
     );
   }
 }
-
