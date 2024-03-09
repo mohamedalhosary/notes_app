@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:quran_app/cubit/add_note_cubit/add_note_cubit_cubit.dart';
 import 'package:quran_app/models/note_models.dart';
 import 'package:quran_app/views/notes_views.dart';
 import 'package:quran_app/views/widgets/constants.dart';
@@ -18,10 +20,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Unbounded'),
-      debugShowCheckedModeBanner: false,
-      home: const NotesView(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AddNoteCubitCubit(),
+        ),
+      ],
+      child:  MaterialApp(
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Unbounded'),
+        debugShowCheckedModeBanner: false,
+        home: const NotesView(),
+      ),
     );
   }
 }
